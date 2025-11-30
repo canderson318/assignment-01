@@ -1,0 +1,10 @@
+{
+    "python.REPL.enableREPLSmartSend": false,
+    "macros": {  // Note: this requires macros extension by publisher:"geddski" 
+        "pythonExecSelectionAndCursorDown": [
+            "python.execSelectionInTerminal", 
+            "cursorDown" 
+        ]
+    }
+}
+
