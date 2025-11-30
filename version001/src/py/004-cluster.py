@@ -14,7 +14,7 @@
 # ---
 
 # %%
-# /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001/src/004*.py
+# /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001/src/py/004*.py
 import pandas as pd
 import numpy as np  
 import os 
@@ -84,6 +84,7 @@ true_class = dat_dict["colData"]['SMTS']
 print('     n       nmi       ars        ss\n0   10  0.247012  0.043196  0.240097\n1   35  0.557894  0.199204  0.023769\n2   60  0.557668  0.198098  0.035695\n3   85  0.552868  0.198300  0.031063\n4  110  0.537636  0.183685  0.042407\n5  135  0.517749  0.163482  0.033979\n6  160  0.222869  0.032342  0.237411\n7  185  0.205565  0.032465  0.214297')
 
 # %%
+np.random.seed(1293)
 hdb = HDBSCAN(min_cluster_size=85)
 clusters = hdb.fit_predict(X)
 
@@ -134,7 +135,7 @@ dat_dict["colData"]['hdb_clusters'] = clusters
 print('     i           BIC\n0    2  3.071488e+06\n1    3  2.893221e+06\n2    4  2.761307e+06\n3    5  2.546933e+06\n4    6  2.406676e+06\n5    7  2.331123e+06\n6    8  2.362337e+06\n7    9  2.256024e+06\n8   10  2.198969e+06\n9   11  2.188732e+06\n10  12  2.174428e+06\n11  13  2.152318e+06\n12  14  2.138064e+06')
 
 # %%
-np.random.seed(42)
+np.random.seed(1293)
 gmm= GaussianMixture(n_components= 9,random_state=0) 
 # ^^ 9 has best silhouette score
 

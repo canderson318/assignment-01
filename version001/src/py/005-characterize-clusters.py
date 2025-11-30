@@ -14,7 +14,7 @@
 # ---
 
 # %%
-# /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001/src/005*.py
+# /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001/src/py/005*.py
 import pandas as pd
 import numpy as np  
 import scanpy as sc
@@ -52,6 +52,7 @@ adata.obs["tissue"] = pd.Categorical(dat_dict['colData'].SMTS.values)
 
 
 # %%
+# extract results from test
 def cluster_results(adata, var, group):
     """Extract DE results for a single group."""
     res = adata.uns["rank_genes_groups"]
@@ -68,6 +69,7 @@ def cluster_results(adata, var, group):
 
 
 # %%
+# run test on scanpy object 
 def get_markers(adata, var):
     """Run DE for a variable and return combined markers for all groups."""
     
@@ -92,6 +94,9 @@ cluster_markers = get_markers(adata, "cluster").merge(dat_dict['rowData'],
                                 left_on  = "gene", 
                                 right_on = "Name")
 
+
+# %% [markdown]
+# filter for top genes for each grouping
 
 # %%
 tissue_tops = (
@@ -118,3 +123,12 @@ cluster_tops
 # %%
 tissue_tops
 
+
+# %% [markdown]
+# ### Results
+# Above I printed the top most characteristic genes per cluster and tissue type. I cross referenced the tissue results with genecards and my results capture the gene expression documentation. 
+#
+# For example, ELAVL3 is asscociated with brain tissue and this is confirmed by other studies ([link](https://www.genecards.org/cgi-bin/carddisp.pl?gene=ELAVL3&keywords=ELAVL3))
+
+# %% [markdown]
+#
