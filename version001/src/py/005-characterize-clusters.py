@@ -14,7 +14,6 @@
 # ---
 
 # %%
-# %%
 # /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001/src/005*.py
 import pandas as pd
 import numpy as np  

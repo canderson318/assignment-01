@@ -14,7 +14,6 @@
 # ---
 
 # %%
-# %%
 # /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001/src/004*.py
 import pandas as pd
 import numpy as np  
@@ -135,6 +134,7 @@ dat_dict["colData"]['hdb_clusters'] = clusters
 print('     i           BIC\n0    2  3.071488e+06\n1    3  2.893221e+06\n2    4  2.761307e+06\n3    5  2.546933e+06\n4    6  2.406676e+06\n5    7  2.331123e+06\n6    8  2.362337e+06\n7    9  2.256024e+06\n8   10  2.198969e+06\n9   11  2.188732e+06\n10  12  2.174428e+06\n11  13  2.152318e+06\n12  14  2.138064e+06')
 
 # %%
+np.random.seed(42)
 gmm= GaussianMixture(n_components= 9,random_state=0) 
 # ^^ 9 has best silhouette score
 
