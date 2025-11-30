@@ -1,3 +1,4 @@
+
 # /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python
 import pandas as pd
 import os 
@@ -100,6 +101,9 @@ print(f"Gene data shape: {gene_dat.shape}")
 
 counts = gene_dat.drop(["Name", "Description"], axis=1).copy()
 rowDat = gene_dat[["Name", "Description"]].copy()
+
+# change rownames
+counts.index = rowDat['Name']
 
 # merge samp attr and pheno dfs
 samp_attr["SAMPID"].unique()[1]
