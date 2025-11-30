@@ -137,7 +137,7 @@ print('     i           BIC\n0    2  3.071488e+06\n1    3  2.893221e+06\n2    4 
 # %%
 np.random.seed(1293)
 gmm= GaussianMixture(n_components= 9,random_state=0) 
-# ^^ 9 has best silhouette score
+# ^^ 9 has best silhouette score (even though i know there's 10)
 
 # %%
 gmm.fit(X)
@@ -167,6 +167,34 @@ print(f"NMI: {nmi}")
 # %%
 dat_dict["colData"]['gmm_clusters'] = clusters
 
+
+# %% [markdown]
+# ### Look at cluster/tissue overlap
+
+# %%
+
+tiss_clust_tab = pd.crosstab(dat_dict['colData'].SMTS, dat_dict['colData'].gmm_clusters)
+tiss_clust_tab
+
+
+# %%
+
+g = sns.clustermap(
+    tiss_clust_tab,
+    method="average",
+    standard_scale=False,
+    metric="euclidean",
+    cmap="viridis",
+    figsize=(8, 8),
+)
+
+g.figure.suptitle("Tissue * Cluster Crosstab", y=1.05)
+plt.show()
+
+
+
+# %% [markdown]
+# Looks like endoderm clusters together in cluster 8. Brain is pretty much only in cluster 4, Thyroid in cluster 7 and Blood in cluster 5. Muscular tissue also clusters together with heart and muscle both being in cluster 2. 
 
 # %% [markdown]
 # ### Save data

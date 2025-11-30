@@ -23,7 +23,6 @@ import polars as pl
 import shutil
 import pickle
 from pathlib import Path
-import subprocess as sp
 
 # %%
 #\\\

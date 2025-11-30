@@ -73,7 +73,6 @@ def cluster_results(adata, var, group):
 def get_markers(adata, var):
     """Run DE for a variable and return combined markers for all groups."""
     
-    # Run DE ONCE — this overwrites rank_genes_groups
     sc.tl.rank_genes_groups(adata, groupby=var, method="wilcoxon")
     
     groups = adata.obs[var].unique().tolist()
@@ -96,7 +95,7 @@ cluster_markers = get_markers(adata, "cluster").merge(dat_dict['rowData'],
 
 
 # %% [markdown]
-# filter for top genes for each grouping
+# ##### filter for top genes for each grouping
 
 # %%
 tissue_tops = (
@@ -122,7 +121,6 @@ cluster_tops
 
 # %%
 tissue_tops
-
 
 # %% [markdown]
 # ### Results
