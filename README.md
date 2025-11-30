@@ -31,3 +31,6 @@ Run these [scripts](src/py/) in numerical order to reproduce results.
 - Run Wilcoxon-Sum-Rank test on each cluster's ith gene expression _g_ versus every other cluster's pooled _g_
 - Do the same between tissues
 - Reference literature to see how tissue expression lines up
+
+## AI use
+I used Chat-GPT code generation to help me learn python by translating R functions into python. All of the analysis ideas were mine and my prompts were for syntax, etc., only. 
