@@ -14,7 +14,7 @@
 # ---
 
 # %%
-# /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001/src/py/002-process-data.py
+# /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/src/py/002-process-data.py
 import pandas as pd
 import numpy as np  
 import os 
@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import gaussian_kde
 
 # %%
-os.chdir("/Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001")
+os.chdir("/Users/canderson/Documents/school/CPBS7602-class/assignment-01")
 
 # %%
 with open("processed-data/001-dat-dict.pkl",'rb') as f:

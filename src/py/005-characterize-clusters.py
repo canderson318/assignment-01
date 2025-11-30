@@ -14,7 +14,7 @@
 # ---
 
 # %%
-# /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001/src/py/005*.py
+# /Users/canderson/miniconda3/envs/cu-cpbs-7602/bin/python /Users/canderson/Documents/school/CPBS7602-class/assignment-01/src/py/005*.py
 import pandas as pd
 import numpy as np  
 import scanpy as sc
@@ -24,7 +24,7 @@ import os
 import pickle
 
 # %%
-os.chdir("/Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001")
+os.chdir("/Users/canderson/Documents/school/CPBS7602-class/assignment-01")
 
 
 # %%

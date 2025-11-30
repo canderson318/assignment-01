@@ -30,7 +30,7 @@ from pathlib import Path
 # Set up
 #\\\
 #\\\
-os.chdir("/Users/canderson/Documents/school/CPBS7602-class/assignment-01/version001")
+os.chdir("/Users/canderson/Documents/school/CPBS7602-class/assignment-01")
 pd.set_option("display.max_rows", 20)
 pd.set_option("display.max_columns", None)
 pd.set_option("display.width", None)

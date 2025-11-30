@@ -9,7 +9,7 @@ Download dependencies with `conda env create -f environment.yml`.
 
 
 ## Analysis
-Run these [scripts](version001/src/py/) in numerical order to reproduce results. 
+Run these [scripts](src/py/) in numerical order to reproduce results. 
 
 #### `001-download-data`
 - Download gene counts matrix and sample/subject metadata and format in summarized experiment format. 
